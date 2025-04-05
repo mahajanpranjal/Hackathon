@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+pydantic
+matplotlib
+crewai
+openai
+fpdf
+python-multipart
+streamlit
+pandas
+snowflake-connector-python
+litellm
