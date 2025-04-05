@@ -76,7 +76,20 @@ class CodeAgent:
                 return None
 
             local_vars = {}
-            exec(code, {"plt": plt}, local_vars)
+            exec(
+            code,
+            {
+                "__builtins__": __builtins__,
+                "plt": plt,
+                "BytesIO": BytesIO,
+                "datetime": datetime,         # <-- ADD THIS
+                "timedelta": timedelta,       # <-- AND THIS
+                "base64": base64,
+                "os": os,
+            },
+            local_vars
+        )
+
 
             img_buffer = BytesIO()
             plt.savefig(img_buffer, format="png")
