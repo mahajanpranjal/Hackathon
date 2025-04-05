@@ -20,6 +20,9 @@ class ReportAgent(Agent):
             """Generates an in-depth financial research report with rich insights across all sections, targeting a minimum of 30 pages of detailed content."""
 
             prompt = f"""
+            import matplotlib.pyplot as plt
+            import datetime
+            import pandas as pd
             # **Financial Research Report**
             ## **{query}**
             
