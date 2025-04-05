@@ -91,7 +91,8 @@ from fastapi.responses import PlainTextResponse
 import traceback
 @app.get("/download_report")
 def download_report():
-    return FileResponse("static/reports/downloaded_report.pdf", media_type="application/pdf", filename="downloaded_report.pdf")
+    file_path = "static/reports/downloaded_report.pdf"
+    return FileResponse(file_path, media_type='application/pdf', filename="financial_report.pdf")
 
 
 @app.post("/search")
